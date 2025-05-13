@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: wedding-bot
+    env: java
+    plan: free
+    buildCommand: |
+      apt-get update
+      apt-get install -y maven
+      mvn clean install
+    startCommand: java -jar target/wedding-bot-1.0.0.jar
+    envVars:
+      - key: JAVA_VERSION
+        value: "11"  # Указывай свою версию Java
