@@ -33,9 +33,9 @@ import java.util.concurrent.CopyOnWriteArrayList;
 public class WeddingBot extends TelegramLongPollingBot {
 
     private static final CopyOnWriteArrayList<ResponseData> responses = new CopyOnWriteArrayList<>();
-    private static final String BOT_TOKEN = "8137314738:AAHkuw_YmTatwT5Hfr0myPYyaK5WI1-E8No";
     private static final String BOT_USERNAME = "@WeedingDianaBot";
-    private static final String ADMIN_CHAT_ID = "7886639302";
+    private static final String BOT_TOKEN = System.getenv("BOT_TOKEN");
+    private static final String ADMIN_CHAT_ID = System.getenv("ADMIN_CHAT_ID");
 
     @Bean
     public WebMvcConfigurer corsConfigurer() {
