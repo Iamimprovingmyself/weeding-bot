@@ -44,7 +44,7 @@ public class WeddingBot extends TelegramLongPollingBot {
             @Override
             public void addCorsMappings(CorsRegistry registry) {
                 registry.addMapping("/rsvp")
-                        .allowedOrigins("https://iamimprovingmyself.github.io", "https://iamimprovingmyself.github.io/weeding")
+                        .allowedOrigins("*")
                         .allowedMethods("POST")
                         .allowedHeaders("*");
             }
