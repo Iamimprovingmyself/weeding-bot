@@ -7,6 +7,12 @@
   <artifactId>wedding-bot</artifactId>
   <version>1.0.0</version>
 
+  <properties>
+    <java.version>15</java.version>  <!-- Явно укажите версию Java -->
+    <maven.compiler.source>15</maven.compiler.source>
+    <maven.compiler.target>15</maven.compiler.target>
+  </properties>
+
   <parent>
     <groupId>org.springframework.boot</groupId>
     <artifactId>spring-boot-starter-parent</artifactId>
