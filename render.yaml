@@ -1,7 +1,7 @@
 services:
   - type: web
     name: wedding-bot
-    env: java
+    env: java        # Важно: окружение Java!
     plan: free
-    buildCommand: mvn clean install
-    startCommand: java -jar target/your-jar-file.jar
+    buildCommand: ./mvnw clean install  # Используем Maven Wrapper
+    startCommand: java -jar target/wedding-bot-1.0.0.jar  # Имя из pom.xml
