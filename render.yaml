@@ -1,9 +1,5 @@
 services:
   - type: web
     name: wedding-bot
-    env: java
+    env: docker
     plan: free
-    buildCommand: |
-      sudo apt-get update && sudo apt-get install -y openjdk-15-jdk  # Устанавливаем JDK 17
-      ./mvnw clean install
-    startCommand: java -jar target/wedding-bot-1.0.0.jar
