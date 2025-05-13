@@ -37,8 +37,6 @@ public class WeddingBot extends TelegramLongPollingBot {
     private static final String BOT_USERNAME = "@WeedingDianaBot";
     private static final String ADMIN_CHAT_ID = "7886639302";
 
-//    private static final String BOT_TOKEN = System.getenv("BOT_TOKEN");
-//    private static final String ADMIN_CHAT_ID = System.getenv("ADMIN_CHAT_ID");
 
     @Bean
     public WebMvcConfigurer corsConfigurer() {
