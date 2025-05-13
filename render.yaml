@@ -1,7 +1,11 @@
 services:
   - type: web
     name: wedding-bot
-    env: java        # Важно: окружение Java!
+    env: java
     plan: free
-    buildCommand: ./mvnw clean install  # Используем Maven Wrapper
-    startCommand: java -jar target/wedding-bot-1.0.0.jar  # Имя из pom.xml
+    region: frankfurt  # Опционально: выберите ближайший регион
+    buildCommand: ./mvnw clean install
+    startCommand: java -jar target/wedding-bot-1.0.0.jar
+    envVars:
+      - key: SERVER_PORT
+        value: 8080
