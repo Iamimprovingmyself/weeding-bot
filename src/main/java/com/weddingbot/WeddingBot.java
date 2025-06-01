@@ -253,9 +253,10 @@ public class WeddingBot extends TelegramLongPollingBot {
             this.date = date;
         }
 
-        public String getFormattedDate() {
+         public String getFormattedDate() {
             SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy HH:mm");
-            return sdf.format(date);
+            Date adjustedDate = new Date(date.getTime() + 3 * 60 * 60 * 1000); // +3 часа
+            return sdf.format(adjustedDate);
         }
 
 
